@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Megha Salunke | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="assets/Megha_Salunke_Resume.pdf"
+   class="nav-resume-btn"
+   download>
+  Download Resume
+</a>
+
+    <nav id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#qualifications">Qualifications</a>
+      <a href="#skills">Technical Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="hero-section reveal">
+  <div class="container hero-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="hero-text">
+      <h4 class="hero-greet">Hi, I am</h4><br>
+      <h1 class="hero-name">Megha Salunke</h1>
+      <!--<h3 class="hero-role"></h3>-->
+
+      <p class="hero-desc">
+      Recent <b>BE graduate</b> in the <b>Information Technology </b>stream..
+      </p>
+      <div class="hero-highlight-box">
+  <a href="#projects" class="hero-work-btn">View My Work</a>
+
+  <p class="hero-interest">
+   Analytical & data-thinking
+</div>
+
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="hero-image">
+      <div class="image-ring">
+       <img src="assests/images/Megha_photo.jpg" alt="Megha Salunke">
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<div class="section-divider"></div>
+
+<!--___________________________________________________________________________________________________________________________________________________________________-->
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="section about-section reveal">
+  <div class="container">
+
+    <!-- HEADER -->
+   <div class="section-header">
+   <h2>About Me</h2>
+   <span class="line"></span>
+   </div>
+
+    <!-- CARD -->
+    <div class="center-wrapper">
+      <div class="info-card about-card">
+  <p>
+    I am a recent BE graduate in Information Technology with a strong academic foundation and hands-on
+    experience in data analytics, Python, and SQL. Through academic projects, dashboards, and practical
+    assignments, I have developed a keen interest in analyzing data to extract meaningful insights and
+    support data-driven decision-making. I am actively seeking an entry-level opportunity where I can
+    apply my skills, continue learning, and contribute effectively to organizational goals.
+  </p>
+</div>
+
+    </div>
+
+  </div>
+</section>
+<div class="section-divider"></div>
+
+
+<!-- ___________________________________________________________________________________________________________________________________________________________________-->
+<!-- ================= QUALIFICATIONS ================= -->
+<section id="qualifications" class="section qualifications-section reveal">
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="section-header">
+      <h2>Qualifications</h2>
+      <p><h4>My Academic Journey</h4> </p>
+      <span class="line"></span>
+    </div>
+
+    <!-- CARDS -->
+    <div class="center-wrapper column">
+
+  <!-- Degree Card -->
+  <div class="info-card qualification-card">
+    <h3>Bachelor of Engineering (IT)</h3>
+    <p class="college-name">
+  Bharati Vidyapeeth’s College of Engineering for Women
+</p>
+
+    <span class="highlight">2021 – 2025 | CGPA: 7.55</span>
+
+    <!-- View More Button -->
+    <button class="view-more-btn" onclick="toggleQualification()">
+      View more
+    </button>
+
+    <!-- Hidden Description -->
+    <p class="qualification-desc" id="qualificationDesc">
+      Gained hands-on experience in SQL through a mini-project, worked on academic projects,
+      dashboards, and basic web development, and explored Machine Learning and AI through
+      practical assignments. These experiences strengthened my problem-solving skills and
+      developed a strong interest in data analytics and related domains.
+    </p>
+  </div>
+
+</div>
+
+
+  </div>
+</section>
+<div class="section-divider"></div>
+
+<!-- ================= TECHNICAL SKILLS ================= -->
+<section id="skills" class="section skills-section reveal">
+  <div class="container">
+
+    <div class="section-header">
+      <h2>Technical Skills</h2>
+      <p>What I work with</p>
+      <span class="line"></span>
+    </div>
+
+    <!-- Skill Cards -->
+<div class="skill-cards">
+
+  <!-- Python -->
+  <div class="skill-card" onclick="showSkill('python')">
+    <span class="iconify" data-icon="logos:python" data-width="42"></span>
+    <span>Python</span>
+  </div>
+
+  <!-- SQL -->
+  <div class="skill-card" onclick="showSkill('sql')">
+    <span class="iconify" data-icon="logos:mysql" data-width="42"></span>
+    <span>SQL</span>
+  </div>
+
+  <!-- AI/ML -->
+  <div class="skill-card" onclick="showSkill('aiml')">
+    <span class="iconify" data-icon="carbon:machine-learning" data-width="42"></span>
+    <span>AI / ML</span>
+  </div>
+
+  <!-- Databricks -->
+  <div class="skill-card" onclick="showSkill('databricks')">
+    <span class="iconify" data-icon="simple-icons:databricks" data-width="42"></span>
+    <span>Databricks</span>
+  </div>
+
+  <!-- Cloud -->
+  <div class="skill-card" onclick="showSkill('cloud')">
+    <span class="iconify" data-icon="logos:aws" data-width="42"></span>
+    <span>Cloud</span>
+  </div>
+
+</div>
+
+
+    <!-- Skill Details (Hidden by default) -->
+    <div class="skill-detail-panel" id="skillDetail" style="display:none;">
+      <h3 id="skillTitle"></h3>
+      <p id="skillDesc"></p>
+      <a id="skillCert" href="#" target="_blank" class="skill-btn" style="display:none;">
+        View Certificate
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="section projects-section reveal">
+  <div class="container">
+
+    <div class="section-header">
+      <h2>Projects</h2>
+      <p>My recent work</p>
+      <span class="line"></span>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="assests/images/NutriElla.jpeg" alt="Ayurvedic Nutrition App">
+
+        <div class="project-content">
+          <h3>Ayurvedic Nutrition App</h3>
+
+          <p class="project-desc">
+            NutriElla – Personalized Herbal Wellness for Menstrual Health 🌸
+            NutriElla is an AI-powered mobile application designed to support women’s menstrual health through personalized 
+            Ayurvedic remedies, nutritional guidance, and holistic wellness practices.
+          </p>
+
+          <span class="read-more" onclick="toggleReadMore(this)">read more...</span>
+
+          <a href="https://github.com/MeghaSalunke/BE_project"
+             target="_blank"
+             class="project-btn">
+            View My Project
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="assests/images/NutriZen.jpg" alt="NutriZen AI App">
+
+        <div class="project-content">
+          <h3>NutriZen – AI Nutrition Agent</h3>
+
+          <p class="project-desc">
+            🥗 NutriZen – AI-Powered Personalized Nutrition Assistant An intelligent AI assistant that provides personalized dietary recommendations 
+            using IBM Watsonx.ai, IBM Granite, and IBM Cloud Lite. NutriZen supports user-friendly text, voice, and image input, offering adaptive meal plans, smart food swaps, 
+            and contextual nutritional advice for individuals seeking better health.
+          </p>
+
+          <span class="read-more" onclick="toggleReadMore(this)">read more...</span>
+
+          <a href="https://github.com/MeghaSalunke/nutriZen"
+             target="_blank"
+             class="project-btn">
+            View My Project
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="assests/images/Hospital_Monitoring_System.jpeg" alt="Hospital Monitoring System">
+
+        <div class="project-content">
+          <h3>Hospital Overloading Monitoring System</h3>
+
+          <p class="project-desc">
+            Hospitals often face overload in specific departments such as Emergency or ICU, even when the overall hospital capacity is not full. 
+            This project builds a hospital-agnostic AI-based monitoring system that predicts department-level overload risk using historical admission, patient flow, and operational data.
+          </p>
+
+          <span class="read-more" onclick="toggleReadMore(this)">read more...</span>
+
+          <a href="https://github.com/MeghaSalunke/Databricks_AI_Challenge_Project"
+             target="_blank"
+             class="project-btn">
+            View My Project
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ================= CTA ================= -->
+<section class="section cta-section reveal">
+  <div class="cta-card">
+
+    <h2>Open to Entry-Level Opportunities</h2>
+<br>
+    <p>
+      I am a recent Information Technology graduate actively seeking an entry-level role
+      where I can apply my skills, learn continuously, and contribute to meaningful projects.
+    </p>
+
+    <a href="assets/Megha_Salunke_Resume.pdf"
+       class="cta-btn"
+       download>
+      Download Resume
+    </a>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section contact-section reveal">
+  <div class="container">
+
+    <div class="section-header">
+      <h2>Contact</h2>
+      <p>Let’s connect</p>
+      <span class="line"></span>
+    </div>
+
+    <div class="contact-card">
+
+      <div class="contact-links">
+
+        <!-- Phone -->
+        <a href="tel:+919322694846" class="contact-item">
+          <span class="contact-icon">📞</span>
+          <span>+91 93226 94846</span>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:meghasalunke2003@gmail.com" class="contact-item">
+          <span class="contact-icon">📧</span>
+          <span>meghasalunke2003@gmail.com</span>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/MeghaSalunke" target="_blank" class="contact-item">
+          <span class="contact-icon">🐙</span>
+          <span>GitHub</span>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/meghasalunke" target="_blank" class="contact-item">
+          <span class="contact-icon">💼</span>
+          <span>LinkedIn</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2025 Megha Salunke | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+
+
+</body>
+</html>
