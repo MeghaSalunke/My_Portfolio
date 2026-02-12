@@ -7,13 +7,16 @@
 }
 
 body {
-  background:
-    radial-gradient(circle at top left, rgba(242,107,138,0.18), transparent 45%),
-    radial-gradient(circle at top right, rgba(221,160,221,0.15), transparent 50%),
-    radial-gradient(circle at bottom left, rgba(255,182,193,0.12), transparent 55%),
-    #0f0f0f;
+  background: linear-gradient(
+    135deg,
+    #0f0f0f,
+    #141428,
+    #0f0f0f
+  );
   color: #ccc;
 }
+
+
 
 .container {
   width: 90%;
@@ -484,3 +487,4 @@ nav a {
   max-width: 900px;
   margin: auto;
 }
+
